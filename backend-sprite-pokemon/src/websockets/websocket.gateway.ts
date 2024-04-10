@@ -1,5 +1,4 @@
 import { Server, Socket } from 'socket.io';
-
 import {
   OnGatewayConnection,
   OnGatewayDisconnect,
@@ -21,6 +20,7 @@ export class WebsocketGateway
   async sendSprite(@MessageBody() @MessageBody() imageBuffer: Buffer) {
     const pokemonId = Math.floor(Math.random() * 898) + 1; // create ramdon id // TODO obterner todas los url disponibles // generar un random a partir de ese punto
     const sprite = await this.pokemonService.base64img(pokemonId); 
+    if ( sprite ) console.log('sprite i send')
     this.clients.forEach((client) => {
       client.send(JSON.stringify({ image: sprite }));
     });
