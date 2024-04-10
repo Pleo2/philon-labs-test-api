@@ -24,7 +24,7 @@ services:
       context: ./backend-sprite-pokemon
       dockerfile: Dockerfile.prod
     ports:
-      - "4001:3001"
+      - "3001:3001"
     volumes:
       - ./backend-sprite-pokemon/src:/usr/src/app/src
     env_file:
