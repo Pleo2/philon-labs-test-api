@@ -44,7 +44,7 @@ services:
   backend-prod:
     build:  
       context: ./backend-sprite-pokemon
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile.prod
     ports:
       - "4001:3001"
     volumes:
