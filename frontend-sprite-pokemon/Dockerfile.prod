@@ -1,0 +1,16 @@
+FROM node:21.7.1
+
+WORKDIR /app
+
+COPY package*.json package-lock.json ./
+COPY . .
+
+RUN npm install
+
+RUN npm run build
+
+ENV PORT=4000
+
+EXPOSE 4000
+
+CMD ["npm", "run", "start"]
