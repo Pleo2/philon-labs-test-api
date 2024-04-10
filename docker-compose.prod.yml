@@ -1,0 +1,46 @@
+version: "3.8"
+
+services:
+  client-prod:
+    build:
+      context: ./frontend-sprite-pokemon
+      dockerfile: Dockerfile.prod
+    ports:
+      - "4000:4000"
+    env_file:
+      - ./frontend-sprite-pokemon/.env
+    networks:
+      - mainnetwork
+    deploy:
+      resources:
+        limits:
+          cpus: '1.5'
+          memory: 512M
+        reservations:
+          cpus: '1.0'
+          memory: 200M
+  backend-prod:
+    build:  
+      context: ./backend-sprite-pokemon
+      dockerfile: Dockerfile.dev
+    ports:
+      - "4001:3001"
+    volumes:
+      - ./backend-sprite-pokemon/src:/usr/src/app/src
+    env_file:
+      - ./backend-sprite-pokemon/.env
+    environment:
+      - PORT=3001
+      - NODE_ENV=production
+    networks:
+      - mainnetwork
+    deploy:
+      resources:
+        limits:
+          cpus: '1.5'
+          memory: 512M
+        reservations:
+          cpus: '1.0'
+          memory: 200M
+networks:
+  mainnetwork:

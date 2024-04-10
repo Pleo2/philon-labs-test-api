@@ -1,0 +1,18 @@
+{
+  "name": "dockerized-full-stack-environment-philon-labs-test",
+  "version": "1.0.0",
+  "description": "Dockerized environment with a database, a back-end and a front-end application.",
+  "scripts": {
+    "startfront:dev": "docker-compose up client-dev --renew-anon-volumes",
+    "startfront:prod": "docker-compose up client-prod --renew-anon-volumes",
+    "endfront:dev": "docker-compose down client-dev --renew-anon-volumes",
+    "endfront:prod": "docker-compose down client-prod --renew-anon-volumes",
+    "startback:prod": "docker-compose up backend-prod --renew-anon-volumes",
+    "endback:prod": "docker-compose down backend-prod --renew-anon-volumes",
+    "startapp:prod": "docker compose -f docker-compose.prod.yml up",
+    "endapp:prod": "docker compose -f docker-compose.prod.yml down",
+    "clean": "docker-compose down -v"
+  },
+  "author": "José Moreno",
+  "license": "ISC"
+}
