@@ -6,7 +6,7 @@ import {
   WebSocketGateway,
   WebSocketServer,
   SubscribeMessage,
-  MessageBody
+  MessageBody,
 } from '@nestjs/websockets';
 import { PokemonService } from './pokemon.service';
 
@@ -15,13 +15,15 @@ export class WebsocketGateway
   implements OnGatewayConnection, OnGatewayDisconnect
 {
   constructor(private readonly pokemonService: PokemonService) {}
+  private clients: Set<WebSocket> = new Set();
 
-  @SubscribeMessage('get-sprite')
-  async getSprite(@MessageBody() data: any): Promise<any> {
-    const pokemonId = Math.floor(Math.random() * 898) + 1;
-    const sprite = await this.pokemonService.getSprite(pokemonId);
-    console.log(sprite)
-    return sprite;
+  @SubscribeMessage('send-sprite')
+  async sendSprite(@MessageBody() @MessageBody() imageBuffer: Buffer) {
+    const pokemonId = Math.floor(Math.random() * 898) + 1; // create ramdon id // TODO obterner todas los url disponibles // generar un random a partir de ese punto
+    const sprite = await this.pokemonService.base64img(pokemonId); 
+    this.clients.forEach((client) => {
+      client.send(JSON.stringify({ image: sprite }));
+    });
   }
 
   handleDisconnect(client: Socket) {
