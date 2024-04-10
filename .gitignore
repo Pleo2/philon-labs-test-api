@@ -1,0 +1,97 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# ! frontend 
+# dependencies
+/frontend-sprite-pokemon/node_modules
+/frontend-sprite-pokemon/.pnp
+/frontend-sprite-pokemon/.pnp.js
+/frontend-sprite-pokemon/.yarn/install-state.gz
+
+# testing
+/frontend-sprite-pokemon/coverage
+
+# next.js
+/frontend-sprite-pokemon/.next/
+/frontend-sprite-pokemon/out/
+
+# production
+/frontend-sprite-pokemon/build
+
+# misc
+/frontend-sprite-pokemon/.DS_Store
+/frontend-sprite-pokemon/*.pem
+
+# debug
+/frontend-sprite-pokemon/npm-debug.log*
+/frontend-sprite-pokemon/yarn-debug.log*
+/frontend-sprite-pokemon/yarn-error.log*
+
+# local env files
+/frontend-sprite-pokemon/.env*.local
+
+# vercel
+/frontend-sprite-pokemon/.vercel
+
+# typescript
+/frontend-sprite-pokemon/*.tsbuildinfo
+/frontend-sprite-pokemon/next-env.d.ts
+
+# ! Backend 
+/backend-sprite-pokemon/co# compiled output
+/backend-sprite-pokemon/dist
+/backend-sprite-pokemon/node_modules
+/backend-sprite-pokemon/build
+
+# Logs
+/backend-sprite-pokemon/logs
+/backend-sprite-pokemon/*.log
+/backend-sprite-pokemon/npm-debug.log*
+/backend-sprite-pokemon/pnpm-debug.log*
+/backend-sprite-pokemon/yarn-debug.log*
+/backend-sprite-pokemon/yarn-error.log*
+/backend-sprite-pokemon/lerna-debug.log*
+
+# OS
+/backend-sprite-pokemon/.DS_Store
+
+# Tests
+/backend-sprite-pokemon/coverage
+/backend-sprite-pokemon/.nyc_output
+
+# IDEs and editors
+/backend-sprite-pokemon/.idea
+/backend-sprite-pokemon/.project
+/backend-sprite-pokemon/.classpath
+/backend-sprite-pokemon/.c9/
+/backend-sprite-pokemon/*.launch
+/backend-sprite-pokemon/.settings/
+/backend-sprite-pokemon/*.sublime-workspace
+
+# IDE - VSCode
+/backend-sprite-pokemon/.vscode/*
+/backend-sprite-pokemon/!.vscode/settings.json
+/backend-sprite-pokemon/!.vscode/tasks.json
+/backend-sprite-pokemon/!.vscode/launch.json
+/backend-sprite-pokemon/!.vscode/extensions.json
+
+# dotenv environment variable files
+/backend-sprite-pokemon/.env
+/backend-sprite-pokemon/.env.development.local
+/backend-sprite-pokemon/.env.test.local
+/backend-sprite-pokemon/.env.production.local
+/backend-sprite-pokemon/.env.local
+
+# temp directory
+/backend-sprite-pokemon/.temp
+/backend-sprite-pokemon/.tmp
+
+# Runtime data
+/backend-sprite-pokemon/pids
+/backend-sprite-pokemon/*.pid
+/backend-sprite-pokemon/*.seed
+/backend-sprite-pokemon/*.pid.lock
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+/backend-sprite-pokemon/report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+
