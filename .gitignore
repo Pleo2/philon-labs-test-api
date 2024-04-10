@@ -1,11 +1,12 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+./package-lock.json
 # ! frontend 
 # dependencies
 /frontend-sprite-pokemon/node_modules
 /frontend-sprite-pokemon/.pnp
 /frontend-sprite-pokemon/.pnp.js
 /frontend-sprite-pokemon/.yarn/install-state.gz
+/frontend-sprite-pokemon/package-lock
 
 # testing
 /frontend-sprite-pokemon/coverage
@@ -41,6 +42,7 @@
 /backend-sprite-pokemon/dist
 /backend-sprite-pokemon/node_modules
 /backend-sprite-pokemon/build
+/backend-sprite-pokemon/package-lock.json
 
 # Logs
 /backend-sprite-pokemon/logs

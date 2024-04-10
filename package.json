@@ -14,5 +14,6 @@
     "clean": "docker-compose down -v"
   },
   "author": "José Moreno",
-  "license": "ISC"
+  "license": "ISC",
+  "main": "index.js"
 }
