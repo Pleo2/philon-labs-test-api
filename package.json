@@ -11,7 +11,8 @@
     "endback:prod": "docker-compose down backend-prod --renew-anon-volumes",
     "startapp:prod": "docker compose -f docker-compose.prod.yml up",
     "endapp:prod": "docker compose -f docker-compose.prod.yml down",
-    "clean": "docker-compose down -v"
+    "clean": "docker-compose down -v",
+    "clean:images": "docker images rm philon-labs-test-api-client-prod philon-labs-test-api-backend-prod"
   },
   "author": "José Moreno",
   "license": "ISC",
