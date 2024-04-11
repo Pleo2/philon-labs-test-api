@@ -1,3 +1,4 @@
-"use client";
-import { io } from "socket.io-client";
-export const socket = io('ws://localhost:3001');
+"use client"
+import { io } from 'socket.io-client';
+const PORT = process.env.PORT ?? 1234
+export const socket = io(`http://localhost:${PORT}`);

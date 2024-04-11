@@ -1,8 +1,9 @@
-import ImageWebSocket from "@/components/ImageWebSocket";
-export default function Home() {
+import HomePage from "../components/HomePage";
+
+export default function App() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <ImageWebSocket></ImageWebSocket>
-    </main>
+      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+        <HomePage/>
+      </main>
   );
 }
