@@ -9,8 +9,6 @@ services:
       - "4000:4000"
     env_file:
       - ./frontend-sprite-pokemon/.env
-    networks:
-      - mainnetwork
     deploy:
       resources:
         limits:
@@ -25,6 +23,7 @@ services:
       dockerfile: Dockerfile.prod
     ports:
       - "3001:3001"
+      - "1234:1234"
     volumes:
       - ./backend-sprite-pokemon/src:/usr/src/app/src
     env_file:
@@ -32,8 +31,6 @@ services:
     environment:
       - PORT=3001
       - NODE_ENV=production
-    networks:
-      - mainnetwork
     deploy:
       resources:
         limits:
@@ -42,5 +39,3 @@ services:
         reservations:
           cpus: '1.0'
           memory: 200M
-networks:
-  mainnetwork:

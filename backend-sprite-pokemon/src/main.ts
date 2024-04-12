@@ -12,7 +12,7 @@ async function bootstrap() {
     allowedHeaders: 'Content-Type,Authorization',
   });
   await app.listen(PORT, () => {
-    console.log(`webSocket run in the PORT=1234 => http://localhost:1234`);
+    console.log(`webSocket run in the => http://localhost:1234`);
   });
 }
 bootstrap();

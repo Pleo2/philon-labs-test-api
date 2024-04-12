@@ -8,11 +8,10 @@ import {
   MessageBody,
 } from '@nestjs/websockets';
 import { PokemonService } from './pokemon.service';
-import { allowedOrigins } from 'src/config/allowedorigins';
-const clients = {}
+
 // this the port where the websocket, it's running
 @WebSocketGateway(1234, {
-  cors: { origin: allowedOrigins}
+  cors: { origin: "*"}
 })
 export class WebsocketGateway
   implements OnGatewayConnection, OnGatewayDisconnect

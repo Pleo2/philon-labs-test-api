@@ -10,7 +10,10 @@ export default function useWebSocket() {
   const [images, setStorage] = useLocalStorage("Favorites", []);
 
   const handleFavorites = () => {
-    if (images.length < 1) setStorage([sprite]);
+    if (images.length < 1 && sprite !== "") {
+      setStorage([sprite])
+    }
+
     if (!images.includes(sprite) && sprite !== "") {
       const newImages = [...images]
       newImages.push(sprite)
