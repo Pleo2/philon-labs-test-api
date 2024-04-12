@@ -9,7 +9,8 @@ Para Backend-sprite-pokemon se debe agregar `.env` unicamente
 > Instalacion de Dependencias
 ### Installar dempendencias en ambas carpetas
     ```
-       ./ npm install
+    // en la raiz del repositorio
+       npm install
        cd frontend-sprite-pokemon && npm install 
        cd ..
        cd backend-sprite-pokemon && npm install
