@@ -14,7 +14,7 @@ pnpm dev
 bun dev
 ```
 
-First, run test:
+run the test:
 ```bash
 npm run test
 ```
