@@ -75,13 +75,6 @@ Este documento explica el propósito y el uso de cada script dentro del package.
 * **Comando:** `docker-compose down -v`
     * `-v`: Elimina volúmenes además de detener los servicios.
 
-### `clean:images`
-
-* **Descripción:** Elimina imágenes específicas de Docker (probablemente para el frontend y backend en producción).
-* **Comando:** `docker images rm philon-labs-test-api-client-prod philon-labs-test-api-backend-prod`
-    * `docker images rm`: El comando `docker images rm` para eliminar imágenes.
-    * `philon-labs-test-api-client-prod philon-labs-test-api-backend-prod`: Nombres de imágenes específicos para eliminar (reemplazar con nombres de imágenes reales si son diferentes).
-
 ## Consideraciones adicionales:
 
 * Los nombres exactos de los servicios y las imágenes pueden variar según la configuración de su proyecto específico.
